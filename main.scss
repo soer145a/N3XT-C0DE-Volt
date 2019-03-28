@@ -5,4 +5,7 @@ reset {
 }
 body {
   @extend reset;
+  p {
+    @extend reset;
+  }
 }
