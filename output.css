@@ -1,4 +1,89 @@
-reset, body, body p {
+reset, body, header #nav .navItem, header #nav .navItem p, header #user #signup #signupButton p, header #login #loginButton p {
   margin: 0;
   padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #303030;
+  width: 100vw;
+  height: 7vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header #logo img {
+  width: 7vw;
+  margin-left: 20%;
+  margin-top: 0.3vw;
+}
+
+header #nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+header #nav .navItem {
+  color: white;
+}
+
+header #nav .navItem p {
+  font-family: "helvetica", sans-serif;
+  font-size: 1.3em;
+  margin: 1.1vw 0vw 0vw 0vw;
+  cursor: default;
+  text-align: center;
+}
+
+header #user {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+header #user #signup #signupButton {
+  width: 106px;
+  height: 40px;
+  transform: scale(1.2) translate(2vw, 0.4vw);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: normal;
+  border: solid #9bbe40;
+  border-radius: 6px;
+}
+
+header #user #signup #signupButton p {
+  width: 106px;
+  height: 19px;
+  text-align: center;
+  margin-top: 0.45vw;
+  color: white;
+}
+
+header #login {
+  color: #9bbe40;
+}
+
+header #login #loginButton p {
+  transform: scale(1.2) translate(2.5vw, 0.9vw);
+  color: #9bbe40;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: normal;
+}
+
+header #basket #basketIcon {
+  transform: translate(10vw, 0.4vw);
+}
+
+header #basket #basketIcon img {
+  width: 2.5vw;
 }
