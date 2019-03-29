@@ -1,3 +1,6 @@
+@import "css/header";
+@import "css/progressBar";
+
 reset {
   margin: 0;
   padding: 0;
@@ -6,90 +9,50 @@ $headerFont: "helvetica", sans-serif;
 $textFont: "Roboto", sans-serif;
 $theGreen: #9bbe40;
 body {
-  @extend reset;
   overflow-x: hidden;
+  background-color: rgba($color: #e2e2e2, $alpha: 0.6);
 }
-header {
-  background-color: #303030;
+#choose {
+  font-family: $headerFont;
+  position: absolute;
   width: 100vw;
-  height: 7vh;
+  text-align: center;
+  top: 10vw;
+  font-size: 2.5em;
+  cursor: default;
+}
+#buttons {
+  width: 60vw;
+  height: 40vh;
+
+  position: absolute;
+  top: 15vw;
+  left: 20vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  #logo {
-    img {
-      width: 7vw;
-      margin-left: 20%;
-      margin-top: 0.3vw;
-    }
-  }
-  #nav {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px;
-    .navItem {
-      color: white;
+  grid-template-columns: repeat(2, 1fr);
+  .button {
+    background-color: white;
+    transition: 0.3s;
+    width: 20vw;
+    height: 18vh;
+    margin: auto;
+    transform: scale(1.1);
+    border-radius: 0.3vw;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    p {
+      text-align: center;
       @extend reset;
-      p {
-        @extend reset;
-        font-family: $headerFont;
-        font-size: 1.3em;
-        margin: 1.1vw 0vw 0vw 0vw;
-        cursor: default;
-        text-align: center;
-      }
+      font-family: $headerFont;
+      font-size: 2em;
+      transform: translateY(3vw);
+      cursor: pointer;
+    }
+    &:hover {
+      transform: scale(1.15);
     }
   }
-  #user {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    #signup {
-      #signupButton {
-        width: 106px;
-        height: 40px;
-        transform: scale(1.2) translate(2vw, 0.4vw);
-        p {
-          @extend reset;
-          width: 106px;
-          height: 19px;
-          text-align: center;
-          margin-top: 0.45vw;
-          color: white;
-        }
-        font-family: $textFont;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: normal;
-        border: solid $theGreen;
-
-        border-radius: 6px;
-      }
-    }
-  }
-  #login {
-    color: $theGreen;
-    #loginButton {
-      p {
-        @extend reset;
-        transform: scale(1.2) translate(2.5vw, 0.9vw);
-        color: $theGreen;
-
-        text-align: center;
-
-        font-family: $textFont;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: normal;
-      }
-    }
-  }
-  #basket {
-    #basketIcon {
-      transform: translate(10vw, 0.4vw);
-      img {
-        width: 2.5vw;
-      }
-    }
+  .buttonActive {
+    background-color: $theGreen;
   }
 }

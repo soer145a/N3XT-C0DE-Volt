@@ -1,0 +1,46 @@
+$theGreen: #9bbe40;
+#progress {
+  width: 40vw;
+  height: 5vw;
+
+  position: absolute;
+  left: 30vw;
+  top: 5vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  .progressItem {
+    height: 1.8vw;
+    width: 1.8vw;
+    background-color: #d35400;
+    transform: rotate(45deg);
+    margin: auto;
+    border-radius: 5vw;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+  .active {
+    background-color: $theGreen;
+  }
+}
+#progressLines {
+  width: 31vw;
+  height: 5vw;
+  .progressLine {
+    width: 100%;
+    height: 2px;
+
+    background-color: rgba($color: black, $alpha: 0.2);
+
+    margin-top: 2.5vw;
+  }
+
+  position: absolute;
+  left: 34vw;
+  top: 5vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  z-index: 1;
+  .active {
+    background-color: $theGreen;
+  }
+}
