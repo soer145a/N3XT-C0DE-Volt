@@ -1,4 +1,4 @@
-reset, #buttons .button p,
+reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3,
 body,
 header #nav .navItem,
 header #nav .navItem p,
@@ -158,7 +158,7 @@ header #basket #basketIcon img {
   background-color: #9bbe40;
 }
 
-reset, #buttons .button p {
+reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
   margin: 0;
   padding: 0;
 }
@@ -176,12 +176,13 @@ body {
 }
 
 #buttons {
-  width: 45vw;
+  width: 50vw;
   height: 10vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2vw;
-  margin: 2vw;
+  grid-gap: 1vw;
+  transform: translateX(-2.8vw);
+  margin-left: 0;
 }
 
 #buttons .button {
@@ -189,6 +190,7 @@ body {
   transition: 0.3s;
   width: 15vw;
   height: 5vh;
+  margin: auto;
   border-radius: 0.3vw;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -213,7 +215,6 @@ body {
 main {
   display: grid;
   grid-template-columns: 65% 35%;
-  background-color: teal;
   width: 95vw;
   height: 85vh;
   left: 2.5vw;
@@ -222,12 +223,12 @@ main {
 }
 
 main #purchase {
-  background-color: lightblue;
   width: 45vw;
   height: 35vw;
   position: relative;
   top: 5vw;
   left: 5vw;
+  transform: scale(1.2);
 }
 
 main #purchase #roskilde {
@@ -237,21 +238,108 @@ main #purchase #roskilde {
   height: 8vw;
   background-color: #e95814;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 30% 50% 1fr;
+  border-radius: 0.3vw;
 }
 
 main #purchase #roskilde img {
   width: 8vw;
+  border-radius: 0.3vw;
 }
 
-main #summary {
-  background-color: black;
+main #purchase #roskilde #ros1 {
+  font-size: 1.6em;
+  margin: 0.5vw;
+  margin-top: 2vw;
+  font-family: "Roboto", sans-serif;
+}
+
+main #purchase #roskilde #ros2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  margin-left: 1vw;
+  font-weight: bold;
+}
+
+main #purchase #roskilde #ros2 #ros2Span {
+  text-decoration: line-through;
+}
+
+main #purchase #roskilde #ros3 {
+  margin-left: 2vw;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main #purchase #roskilde #quantity #ros4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0.5vw;
+}
+
+main #purchase #roskilde #quantity input {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1.5em;
+}
+
+main #purchase #volt {
+  width: 90%;
+  position: relative;
+  left: 2vw;
+  height: 8vw;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 30% 50% 1fr;
+  border-radius: 0.3vw;
+  margin-top: 1vw;
+}
+
+main #purchase #volt img {
+  width: 8vw;
+  border-radius: 0.3vw;
+}
+
+main #purchase #volt #ros1 {
+  font-size: 1.6em;
+  margin: 0.5vw;
+  margin-top: 2vw;
+  font-family: "Roboto", sans-serif;
+}
+
+main #purchase #volt #ros2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  margin-left: 1vw;
+  font-weight: bold;
+}
+
+main #purchase #volt #ros2 #ros2Span {
+  text-decoration: line-through;
+}
+
+main #purchase #volt #ros3 {
+  margin-left: 2vw;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main #purchase #volt #quantity #ros4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0.5vw;
+}
+
+main #purchase #volt #quantity input {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1.5em;
 }
 
 main #summary #info {
   width: 30vw;
   height: 80vh;
-  background-color: blue;
+  background-color: white;
   margin: auto;
   margin-top: 1vw;
 }

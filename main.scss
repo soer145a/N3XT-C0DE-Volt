@@ -20,19 +20,21 @@ body {
   margin: 2vw;
 }
 #buttons {
-  width: 45vw;
+  width: 50vw;
   height: 10vh;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2vw;
-  margin: 2vw;
+  grid-gap: 1vw;
+  transform: translateX(-2.8vw);
+  margin-left: 0;
+
   .button {
     background-color: white;
     transition: 0.3s;
     width: 15vw;
     height: 5vh;
-
+    margin: auto;
     border-radius: 0.3vw;
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -55,19 +57,19 @@ body {
 main {
   display: grid;
   grid-template-columns: 65% 35%;
-  background-color: teal;
+
   width: 95vw;
   height: 85vh;
   left: 2.5vw;
   top: 10vh;
   position: absolute;
   #purchase {
-    background-color: lightblue;
     width: 45vw;
     height: 35vw;
     position: relative;
     top: 5vw;
     left: 5vw;
+    transform: scale(1.2);
     #roskilde {
       width: 90%;
       position: relative;
@@ -75,18 +77,104 @@ main {
       height: 8vw;
       background-color: #e95814;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 30% 50% 1fr;
+      border-radius: 0.3vw;
       img {
         width: 8vw;
+        border-radius: 0.3vw;
+      }
+      #ros1 {
+        @extend reset;
+        font-size: 1.6em;
+        margin: 0.5vw;
+        margin-top: 2vw;
+        font-family: $textFont;
+      }
+      #ros2 {
+        @extend reset;
+        font-family: $textFont;
+        font-size: 1.1em;
+        margin-left: 1vw;
+        font-weight: bold;
+        #ros2Span {
+          text-decoration: line-through;
+        }
+      }
+      #ros3 {
+        @extend reset;
+        margin-left: 2vw;
+        font-family: $textFont;
+        color: rgba($color: black, $alpha: 0.7);
+      }
+      #quantity {
+        #ros4 {
+          font-family: $textFont;
+          font-size: 1.5em;
+          margin-top: 0.5vw;
+        }
+        input {
+          width: 2vw;
+          height: 2vw;
+          font-size: 1.5em;
+        }
+      }
+    }
+    #volt {
+      width: 90%;
+      position: relative;
+      left: 2vw;
+      height: 8vw;
+      background-color: white;
+      display: grid;
+      grid-template-columns: 30% 50% 1fr;
+      border-radius: 0.3vw;
+      margin-top: 1vw;
+      img {
+        width: 8vw;
+        border-radius: 0.3vw;
+      }
+      #ros1 {
+        @extend reset;
+        font-size: 1.6em;
+        margin: 0.5vw;
+        margin-top: 2vw;
+        font-family: $textFont;
+      }
+      #ros2 {
+        @extend reset;
+        font-family: $textFont;
+        font-size: 1.1em;
+        margin-left: 1vw;
+        font-weight: bold;
+        #ros2Span {
+          text-decoration: line-through;
+        }
+      }
+      #ros3 {
+        @extend reset;
+        margin-left: 2vw;
+        font-family: $textFont;
+        color: rgba($color: black, $alpha: 0.7);
+      }
+      #quantity {
+        #ros4 {
+          font-family: $textFont;
+          font-size: 1.5em;
+          margin-top: 0.5vw;
+        }
+        input {
+          width: 2vw;
+          height: 2vw;
+          font-size: 1.5em;
+        }
       }
     }
   }
   #summary {
-    background-color: black;
     #info {
       width: 30vw;
       height: 80vh;
-      background-color: blue;
+      background-color: white;
       margin: auto;
       margin-top: 1vw;
     }
