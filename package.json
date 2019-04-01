@@ -1,7 +1,7 @@
 {
   "name": "portfolio-mappe",
   "version": "1.0.0",
-  "description": "",
+  "description": "Our work for the volt company and school active",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,16 @@
   "devDependencies": {
     "gsap": "^2.1.2",
     "node-sass": "^4.11.0"
-  }
+  },
+  "dependencies": {
+    "cssnano": "^4.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soer145a/N3XT-C0DE-Volt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soer145a/N3XT-C0DE-Volt/issues"
+  },
+  "homepage": "https://github.com/soer145a/N3XT-C0DE-Volt#readme"
 }
