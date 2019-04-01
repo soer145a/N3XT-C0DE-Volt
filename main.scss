@@ -14,29 +14,25 @@ body {
 }
 #choose {
   font-family: $headerFont;
-  position: absolute;
-  width: 100vw;
-  text-align: center;
-  top: 10vw;
+
   font-size: 2.5em;
   cursor: default;
+  margin: 2vw;
 }
 #buttons {
-  width: 60vw;
-  height: 40vh;
+  width: 45vw;
+  height: 10vh;
 
-  position: absolute;
-  top: 15vw;
-  left: 20vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
+  margin: 2vw;
   .button {
     background-color: white;
     transition: 0.3s;
-    width: 20vw;
-    height: 18vh;
-    margin: auto;
-    transform: scale(1.1);
+    width: 15vw;
+    height: 5vh;
+
     border-radius: 0.3vw;
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -44,15 +40,55 @@ body {
       text-align: center;
       @extend reset;
       font-family: $headerFont;
-      font-size: 2em;
-      transform: translateY(3vw);
+      font-size: 1.6em;
+      transform: translateY(0.5vw);
       cursor: pointer;
     }
     &:hover {
-      transform: scale(1.15);
+      transform: scale(1.05);
     }
   }
   .buttonActive {
     background-color: $theGreen;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-color: teal;
+  width: 95vw;
+  height: 85vh;
+  left: 2.5vw;
+  top: 10vh;
+  position: absolute;
+  #purchase {
+    background-color: lightblue;
+    width: 45vw;
+    height: 35vw;
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+    #roskilde {
+      width: 90%;
+      position: relative;
+      left: 2vw;
+      height: 8vw;
+      background-color: #e95814;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      img {
+        width: 8vw;
+      }
+    }
+  }
+  #summary {
+    background-color: black;
+    #info {
+      width: 30vw;
+      height: 80vh;
+      background-color: blue;
+      margin: auto;
+      margin-top: 1vw;
+    }
   }
 }

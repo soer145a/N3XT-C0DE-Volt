@@ -55,23 +55,39 @@
       <div class="progressItem"></div>
       <div class="progressItem"></div>
       <div class="progressItem"></div>
-      <div class="progressItem"></div>
     </div>
     <div id="progressLines">
       <div class="progressLine active"></div>
       <div class="progressLine"></div>
       <div class="progressLine"></div>
-      <div class="progressLine"></div>
     </div>
-    <p id="choose">What would you like to do?</p>
-    <div id="buttons">
-      <div class="button" id="button1">
-        <p>I have a Volt</p>
+    <main>
+      <div id="purchase">
+        <p id="choose">Choose your product</p>
+        <div id="buttons">
+          <div class="button" id="button1">
+            <p>I have a Volt Charger</p>
+          </div>
+          <div class="button buttonActive" id="button2">
+            <p>I need a Volt Charger</p>
+          </div>
+        </div>
+        <div id="roskilde">
+          <img src="images/ros.jpg" alt="" />
+          <div>
+            <p id="ros1">Exchange Service</p>
+            <p id="ros2">179DKK <span id="ros2Span"> 250DKK</span></p>
+          </div>
+          <div id="quantity">
+            <p id="ros3">Quantity</p>
+            <input type="number" />
+          </div>
+        </div>
       </div>
-      <div class="button buttonActive" id="button2">
-        <p>I want to buy a Volt</p>
+      <div id="summary">
+        <div id="info"></div>
       </div>
-    </div>
+    </main>
   </body>
   <script src="index.js"></script>
 </html>

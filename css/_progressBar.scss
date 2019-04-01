@@ -7,12 +7,12 @@ $theGreen: #9bbe40;
   left: 30vw;
   top: 5vw;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   .progressItem {
     height: 1.8vw;
     width: 1.8vw;
-    background-color: #d35400;
-    transform: rotate(45deg);
+    background-color: orange;
+
     margin: auto;
     border-radius: 5vw;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
@@ -30,15 +30,14 @@ $theGreen: #9bbe40;
     height: 2px;
 
     background-color: rgba($color: black, $alpha: 0.2);
-
-    margin-top: 2.5vw;
+    transform: translateY(2.5vw);
   }
 
   position: absolute;
-  left: 34vw;
+  left: 35vw;
   top: 5vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   z-index: 1;
   .active {
     background-color: $theGreen;

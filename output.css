@@ -119,14 +119,13 @@ header #basket #basketIcon img {
   left: 30vw;
   top: 5vw;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #progress .progressItem {
   height: 1.8vw;
   width: 1.8vw;
-  background-color: #d35400;
-  transform: rotate(45deg);
+  background-color: orange;
   margin: auto;
   border-radius: 5vw;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
@@ -141,10 +140,10 @@ header #basket #basketIcon img {
   width: 31vw;
   height: 5vw;
   position: absolute;
-  left: 34vw;
+  left: 35vw;
   top: 5vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   z-index: 1;
 }
 
@@ -152,7 +151,7 @@ header #basket #basketIcon img {
   width: 100%;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.2);
-  margin-top: 2.5vw;
+  transform: translateY(2.5vw);
 }
 
 #progressLines .active {
@@ -171,31 +170,25 @@ body {
 
 #choose {
   font-family: "helvetica", sans-serif;
-  position: absolute;
-  width: 100vw;
-  text-align: center;
-  top: 10vw;
   font-size: 2.5em;
   cursor: default;
+  margin: 2vw;
 }
 
 #buttons {
-  width: 60vw;
-  height: 40vh;
-  position: absolute;
-  top: 15vw;
-  left: 20vw;
+  width: 45vw;
+  height: 10vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
+  margin: 2vw;
 }
 
 #buttons .button {
   background-color: white;
   transition: 0.3s;
-  width: 20vw;
-  height: 18vh;
-  margin: auto;
-  transform: scale(1.1);
+  width: 15vw;
+  height: 5vh;
   border-radius: 0.3vw;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -204,15 +197,61 @@ body {
 #buttons .button p {
   text-align: center;
   font-family: "helvetica", sans-serif;
-  font-size: 2em;
-  transform: translateY(3vw);
+  font-size: 1.6em;
+  transform: translateY(0.5vw);
   cursor: pointer;
 }
 
 #buttons .button:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 #buttons .buttonActive {
   background-color: #9bbe40;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-color: teal;
+  width: 95vw;
+  height: 85vh;
+  left: 2.5vw;
+  top: 10vh;
+  position: absolute;
+}
+
+main #purchase {
+  background-color: lightblue;
+  width: 45vw;
+  height: 35vw;
+  position: relative;
+  top: 5vw;
+  left: 5vw;
+}
+
+main #purchase #roskilde {
+  width: 90%;
+  position: relative;
+  left: 2vw;
+  height: 8vw;
+  background-color: #e95814;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+main #purchase #roskilde img {
+  width: 8vw;
+}
+
+main #summary {
+  background-color: black;
+}
+
+main #summary #info {
+  width: 30vw;
+  height: 80vh;
+  background-color: blue;
+  margin: auto;
+  margin-top: 1vw;
 }
