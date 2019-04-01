@@ -1,4 +1,4 @@
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3,
+reset, #checkout, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3,
 body,
 header #nav .navItem,
 header #nav .navItem p,
@@ -158,7 +158,18 @@ header #basket #basketIcon img {
   background-color: #9bbe40;
 }
 
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
+#checkout {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#checkout #payment-options {
+  height: 70vh;
+  background-color: white;
+}
+
+reset, #checkout, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
   margin: 0;
   padding: 0;
 }
