@@ -1,4 +1,4 @@
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3,
+reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3, main #summary #info h2, main #summary #info #sum .sumCard .sumHead .product p, main #summary #info #sum .sumCard .sumHead .price p, main #summary #info #sum .sumCard .sumInfo,
 body,
 header #nav .navItem,
 header #nav .navItem p,
@@ -158,7 +158,7 @@ header #basket #basketIcon img {
   background-color: #9bbe40;
 }
 
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
+reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3, main #summary #info h2, main #summary #info #sum .sumCard .sumHead .product p, main #summary #info #sum .sumCard .sumHead .price p, main #summary #info #sum .sumCard .sumInfo {
   margin: 0;
   padding: 0;
 }
@@ -337,9 +337,50 @@ main #purchase #volt #quantity input {
 }
 
 main #summary #info {
-  width: 30vw;
-  height: 80vh;
+  width: 28vw;
+  height: 70vh;
   background-color: white;
   margin: auto;
-  margin-top: 1vw;
+  margin-top: 5vw;
+  margin-right: 1vw;
+}
+
+main #summary #info h2 {
+  font-family: "helvetica", sans-serif;
+  text-align: center;
+  transform: translateY(1vw);
+  font-size: 2em;
+}
+
+main #summary #info #sum {
+  margin-top: 5vw;
+}
+
+main #summary #info #sum .sumCard {
+  width: 90%;
+  margin: auto;
+  margin-top: 2vw;
+}
+
+main #summary #info #sum .sumCard .sumHead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main #summary #info #sum .sumCard .sumHead .product p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+main #summary #info #sum .sumCard .sumHead .price p {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+main #summary #info #sum .sumCard .sumInfo {
+  width: 50%;
+  margin: 0.5vw;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
 }

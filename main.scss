@@ -172,11 +172,54 @@ main {
   }
   #summary {
     #info {
-      width: 30vw;
-      height: 80vh;
+      width: 28vw;
+      height: 70vh;
       background-color: white;
       margin: auto;
-      margin-top: 1vw;
+      margin-top: 5vw;
+      margin-right: 1vw;
+      h2 {
+        @extend reset;
+        font-family: $headerFont;
+
+        text-align: center;
+        transform: translateY(1vw);
+        font-size: 2em;
+      }
+      #sum {
+        margin-top: 5vw;
+        .sumCard {
+          width: 90%;
+          margin: auto;
+          margin-top: 2vw;
+          .sumHead {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .product {
+              p {
+                @extend reset;
+                font-family: $textFont;
+                font-size: 1.2em;
+              }
+            }
+            .price {
+              p {
+                @extend reset;
+                float: right;
+                font-family: $textFont;
+                font-size: 1.2em;
+              }
+            }
+          }
+          .sumInfo {
+            @extend reset;
+            width: 50%;
+            margin: 0.5vw;
+            font-family: $textFont;
+            color: rgba($color: black, $alpha: 0.7);
+          }
+        }
+      }
     }
   }
 }
