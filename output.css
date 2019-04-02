@@ -1,4 +1,4 @@
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3, main #summary #info h2, main #summary #info #sum .sumCard .sumHead .product p, main #summary #info #sum .sumCard .sumHead .price p, main #summary #info #sum .sumCard .sumInfo,
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3,
 body,
 header #nav .navItem,
 header #nav .navItem p,
@@ -158,7 +158,140 @@ header #basket #basketIcon img {
   background-color: #9bbe40;
 }
 
-reset, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3, main #summary #info h2, main #summary #info #sum .sumCard .sumHead .product p, main #summary #info #sum .sumCard .sumHead .price p, main #summary #info #sum .sumCard .sumInfo {
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
+  margin: 0;
+  padding: 0;
+}
+
+#summary #info {
+  width: 28vw;
+  height: 70vh;
+  background-color: white;
+  margin: auto;
+  margin-top: 5vw;
+  margin-right: 1vw;
+}
+
+#summary #info h2 {
+  font-family: "helvetica", sans-serif;
+  text-align: center;
+  transform: translateY(1vw);
+  font-size: 2em;
+}
+
+#summary #info #sum {
+  margin-top: 5vw;
+}
+
+#summary #info #sum .sumCard {
+  width: 90%;
+  margin: auto;
+  margin-top: 2vw;
+  transition: 0.3s;
+}
+
+#summary #info #sum .sumCard .sumHead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#summary #info #sum .sumCard .sumHead .product p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+#summary #info #sum .sumCard .sumHead .price p {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+#summary #info #sum .sumCard .sumInfo {
+  width: 50%;
+  margin: 0.5vw;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#summary #info #payment #values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  margin-top: 10vw;
+}
+
+#summary #info #payment #values #payment1 #moms {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#summary #info #payment #values #payment2 #momsValue {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5em;
+}
+
+#summary #info #payment #total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  margin-top: 1vw;
+}
+
+#summary #info #payment #total #totalTxt {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#summary #info #payment #total #totalValue {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5em;
+}
+
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation {
+  position: absolute;
+  bottom: 2vw;
+  left: 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+#navigation a {
+  text-decoration: none;
+}
+
+#navigation .navButton {
+  border: 2px solid #cdcdcd;
+  width: 5vw;
+  height: 2vw;
+  border-radius: 6px;
+}
+
+#navigation .navButton p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  transform: translateY(0.5vw);
+  color: black;
+}
+
+#navigation #next {
+  border-color: #9bbe40;
+}
+
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
   margin: 0;
   padding: 0;
 }
@@ -288,6 +421,7 @@ main #purchase #volt {
   position: relative;
   left: 2vw;
   height: 8vw;
+  transition: 0.3s;
   background-color: white;
   display: grid;
   grid-template-columns: 30% 50% 1fr;
@@ -334,53 +468,4 @@ main #purchase #volt #quantity input {
   width: 2vw;
   height: 2vw;
   font-size: 1.5em;
-}
-
-main #summary #info {
-  width: 28vw;
-  height: 70vh;
-  background-color: white;
-  margin: auto;
-  margin-top: 5vw;
-  margin-right: 1vw;
-}
-
-main #summary #info h2 {
-  font-family: "helvetica", sans-serif;
-  text-align: center;
-  transform: translateY(1vw);
-  font-size: 2em;
-}
-
-main #summary #info #sum {
-  margin-top: 5vw;
-}
-
-main #summary #info #sum .sumCard {
-  width: 90%;
-  margin: auto;
-  margin-top: 2vw;
-}
-
-main #summary #info #sum .sumCard .sumHead {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-main #summary #info #sum .sumCard .sumHead .product p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-}
-
-main #summary #info #sum .sumCard .sumHead .price p {
-  float: right;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-}
-
-main #summary #info #sum .sumCard .sumInfo {
-  width: 50%;
-  margin: 0.5vw;
-  font-family: "Roboto", sans-serif;
-  color: rgba(0, 0, 0, 0.7);
 }

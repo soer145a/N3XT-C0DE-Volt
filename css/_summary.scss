@@ -1,0 +1,107 @@
+reset {
+  margin: 0;
+  padding: 0;
+}
+$headerFont: "helvetica", sans-serif;
+$textFont: "Roboto", sans-serif;
+$theGreen: #9bbe40;
+
+#summary {
+  #info {
+    width: 28vw;
+    height: 70vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 5vw;
+    margin-right: 1vw;
+    h2 {
+      @extend reset;
+      font-family: $headerFont;
+
+      text-align: center;
+      transform: translateY(1vw);
+      font-size: 2em;
+    }
+    #sum {
+      margin-top: 5vw;
+      .sumCard {
+        width: 90%;
+        margin: auto;
+        margin-top: 2vw;
+        transition: 0.3s;
+        .sumHead {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          .product {
+            p {
+              @extend reset;
+              font-family: $textFont;
+              font-size: 1.2em;
+            }
+          }
+          .price {
+            p {
+              @extend reset;
+              float: right;
+              font-family: $textFont;
+              font-size: 1.2em;
+            }
+          }
+        }
+        .sumInfo {
+          @extend reset;
+          width: 50%;
+          margin: 0.5vw;
+          font-family: $textFont;
+          color: rgba($color: black, $alpha: 0.7);
+        }
+      }
+    }
+    #payment {
+      #values {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        margin: auto;
+        margin-top: 10vw;
+        #payment1 {
+          #moms {
+            @extend reset;
+            font-family: $textFont;
+            font-weight: bold;
+            font-size: 1.5em;
+          }
+        }
+        #payment2 {
+          #momsValue {
+            @extend reset;
+            font-family: $textFont;
+            font-weight: bold;
+            float: right;
+            font-size: 1.5em;
+          }
+        }
+      }
+      #total {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        margin: auto;
+        margin-top: 1vw;
+        #totalTxt {
+          @extend reset;
+          font-family: $textFont;
+          font-weight: bold;
+          font-size: 1.5em;
+        }
+        #totalValue {
+          @extend reset;
+          font-family: $textFont;
+          font-weight: bold;
+          float: right;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

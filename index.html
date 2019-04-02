@@ -81,7 +81,7 @@
           </div>
           <div id="quantity">
             <p id="ros4">Quantity</p>
-            <input type="number" value="1" />
+            <input type="number" value="1" id="quantityInput1" min="0" />
           </div>
         </div>
         <div id="volt">
@@ -93,7 +93,7 @@
           </div>
           <div id="quantity">
             <p id="ros4">Quantity</p>
-            <input type="number" value="1" />
+            <input type="number" value="1" id="quantityInput2" min="0" />
           </div>
         </div>
       </div>
@@ -101,26 +101,26 @@
         <div id="info">
           <h2>Summary</h2>
           <div id="sum">
-            <div class="sumCard">
+            <div class="sumCard" id="sumCard1">
               <div class="sumHead">
                 <div class="product">
-                  <p>1x Swapping Service</p>
+                  <p><span id="productAmount1">1x</span> Swapping Service</p>
                 </div>
                 <div class="price">
-                  <p>179,- DKK</p>
+                  <p><span id="priceSpan1">179</span>,- DKK</p>
                 </div>
               </div>
               <p class="sumInfo">
                 Get your charger switched to a fully charged one in no time!
               </p>
             </div>
-            <div class="sumCard">
+            <div class="sumCard" id="sumCard2">
               <div class="sumHead">
                 <div class="product">
-                  <p>1x Volt Charger</p>
+                  <p><span id="productAmount2">1x</span> Volt Charger</p>
                 </div>
                 <div class="price">
-                  <p>200,- DKK</p>
+                  <p><span id="priceSpan2">200</span>,- DKK</p>
                 </div>
               </div>
               <p class="sumInfo">
@@ -129,11 +129,37 @@
             </div>
           </div>
           <div id="payment">
-            <div id="payment1"></div>
-            <div id="payment2"></div>
-            <div id="total"></div>
+            <div id="values">
+              <div id="payment1">
+                <p id="moms">Moms 25%</p>
+              </div>
+              <div id="payment2">
+                <p id="momsValue">94.75,- DKK</p>
+              </div>
+            </div>
+
+            <div id="total">
+              <p id="totalTxt">
+                TOTAL
+              </p>
+              <div id="totalValueContainer">
+                <p id="totalValue">
+                  378,- DKK
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div id="navigation">
+        <div class="navButton" id="back">
+          <p>Back</p>
+        </div>
+        <a href="signUp.html">
+          <div class="navButton" id="next">
+            <p>Next step</p>
+          </div>
+        </a>
       </div>
     </main>
   </body>
