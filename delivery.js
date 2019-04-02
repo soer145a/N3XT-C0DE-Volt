@@ -11,4 +11,8 @@ function init() {
     document.querySelector("#selectMethod2").classList.add("radioActive");
     document.querySelector("#selectMethod1").classList.remove("radioActive");
   });
+  updateSummary();
+}
+function updateSummary() {
+  console.log("UPDATE");
 }

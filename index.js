@@ -1,6 +1,8 @@
 "use strict";
 import TweenMax from "gsap/TweenMax";
 import Draggable from "gsap/Draggable";
+import { url } from "inspector";
+import { URLSearchParams } from "url";
 
 const swapService = 179;
 const voltCharger = 200;
@@ -24,6 +26,7 @@ function init() {
   document
     .querySelector("#quantityInput2")
     .addEventListener("change", updateSummary);
+  let myParams = new URLSearchParams();
 }
 function checkButtons() {
   console.log("check Buttons");
@@ -56,13 +59,33 @@ function updateSummary() {
   document.querySelector("#momsValue").textContent = moms + ",- DKK";
   let sum = moms + swapServiceTotal + chargerTotal;
   document.querySelector("#totalValue").textContent = sum;
-  addToRestDB(input1.value, input2.value, sum);
+  addToURL(input1.value, input2.value, sum);
 }
-function addToRestDB(value1, value2, value3) {
-  const summaryValues = {
+function addToURL(value1, value2, value3) {
+  let localId =
+    Math.random()
+      .toString(36)
+      .substring(2, 15) +
+    Math.random()
+      .toString(36)
+      .substring(2, 15);
+  /*  const customer = {
+    id: localId,
     service: value1,
     charger: value2,
-    total: value3
+    total: value3,
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    zipCode: "",
+    phoneNumber: "",
+    password: "",
+    creditCardNumber: "",
+    creditCardYear: "",
+    creditCardMonth: "",
+    creditCardCvv: ""
   };
-  console.log(summaryValues);
+  myParams.append("localId" + localId);
+  console.log(customer); */
 }

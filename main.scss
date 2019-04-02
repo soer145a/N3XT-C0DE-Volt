@@ -73,3 +73,25 @@ main {
     }
   }
 }
+#addDelivery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+
+  #deliveryTxt p {
+    @extend reset;
+    font-family: $textFont;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  #deliveryValue {
+    p {
+      @extend reset;
+      font-family: $textFont;
+      font-weight: bold;
+      font-size: 1.5em;
+      float: right;
+    }
+  }
+}
