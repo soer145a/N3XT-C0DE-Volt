@@ -62,21 +62,22 @@
       <div class="progressLine"></div>
     </div>
     <main>
-      <div id="signUp-block">
-        <h1>Sign in Here!</h1>
+      <form id="signUp-block-form">
+        <h1>Account Details</h1>
+        <label for="firstName-input">First Name</label>
+        <input type="text" name="firstName" id="firstName-input" >
+        <label for="lastName-input">Last Name</label>
+        <input type="text" name="lastName" id="lastName-input" >
+        <label for="email-input">Email Address</label>
+        <input type="email" name="email" id="email-input" required>
+        <label for="number-input">Phone Number <span>*</span></label>
+        <input type="number" name="number" id="number-input" required>
+        <label for="password-input">Password<span>*</span></label>
+        <input type="password" name="password" id="password-input" >
+        <input type="submit" value="Sign Up" id='signup-submit'>
+      </form>
 
-        <button id="signup-fb-btn" class="signup-btn">
-          Sign in with Facebook
-        </button>
-        <button id="signup-google-btn" class="signup-btn">
-          Sign in with Google
-        </button>
-        <p id="or">or</p>
-        <button id="signup-email-btn" class="signup-btn">
-          Sign up with email
-        </button>
-      </div>
     </main>
   </body>
-  <script src="signUp.js"></script>
+  <script src="signUp_email.js"></script>
 </html>

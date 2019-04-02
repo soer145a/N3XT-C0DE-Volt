@@ -2,7 +2,7 @@
 @import "css/progressBar";
 @import "css/summary";
 @import "css/navBottom";
-
+@import "css/signUp";
 reset {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ reset {
 $headerFont: "helvetica", sans-serif;
 $textFont: "Roboto", sans-serif;
 $theGreen: #9bbe40;
+
 body {
   overflow-x: hidden;
   background-color: rgba($color: #e2e2e2, $alpha: 0.6);
