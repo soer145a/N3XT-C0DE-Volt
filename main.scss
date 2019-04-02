@@ -2,6 +2,7 @@
 @import "css/progressBar";
 @import "css/summary";
 @import "css/navBottom";
+
 reset {
   margin: 0;
   padding: 0;
@@ -13,48 +14,7 @@ body {
   overflow-x: hidden;
   background-color: rgba($color: #e2e2e2, $alpha: 0.6);
 }
-#choose {
-  font-family: $headerFont;
 
-  font-size: 2.5em;
-  cursor: default;
-  margin: 2vw;
-}
-#buttons {
-  width: 50vw;
-  height: 10vh;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1vw;
-  transform: translateX(-2.8vw);
-  margin-left: 0;
-
-  .button {
-    background-color: white;
-    transition: 0.3s;
-    width: 15vw;
-    height: 5vh;
-    margin: auto;
-    border-radius: 0.3vw;
-    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    p {
-      text-align: center;
-      @extend reset;
-      font-family: $headerFont;
-      font-size: 1.6em;
-      transform: translateY(0.5vw);
-      cursor: pointer;
-    }
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-  .buttonActive {
-    background-color: $theGreen;
-  }
-}
 main {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -64,112 +24,52 @@ main {
   left: 2.5vw;
   top: 10vh;
   position: absolute;
-  #purchase {
-    width: 45vw;
+}
+@import "css/purchaseSection";
+#deliveryMethod {
+  h2 {
+    @extend reset;
+    font-family: $headerFont;
+    font-size: 2em;
+    margin: 3vw;
+    transform: translateY(1vw);
+  }
+  #methodBox {
+    width: 50vw;
     height: 35vw;
-    position: relative;
-    top: 5vw;
-    left: 5vw;
-    transform: scale(1.2);
-    #roskilde {
-      width: 90%;
-      position: relative;
-      left: 2vw;
-      height: 8vw;
-      background-color: #e95814;
+    background-color: white;
+    margin-top: 5vw;
+    margin-left: 2vw;
+
+    .selectMethod {
+      background-color: lightgray;
+      width: 80%;
+      height: 5vw;
+      margin-left: 2vw;
       display: grid;
-      grid-template-columns: 30% 50% 1fr;
-      border-radius: 0.3vw;
-      img {
-        width: 8vw;
-        border-radius: 0.3vw;
+      grid-template-columns: 10% 1fr;
+      margin-top: 1vw;
+      cursor: pointer;
+      transition: 0.1s;
+      .pseoduRadio {
+        width: 2vw;
+        height: 2vw;
+        background-color: white;
+        border-radius: 5vw;
+        border: solid gray 2px;
+        margin: auto;
+        margin-top: 1.5vw;
       }
-      #ros1 {
+
+      .selectTxt {
         @extend reset;
-        font-size: 1.6em;
-        margin: 0.5vw;
-        margin-top: 2vw;
         font-family: $textFont;
-      }
-      #ros2 {
-        @extend reset;
-        font-family: $textFont;
-        font-size: 1.1em;
-        margin-left: 1vw;
-        font-weight: bold;
-        #ros2Span {
-          text-decoration: line-through;
-        }
-      }
-      #ros3 {
-        @extend reset;
-        margin-left: 2vw;
-        font-family: $textFont;
-        color: rgba($color: black, $alpha: 0.7);
-      }
-      #quantity {
-        #ros4 {
-          font-family: $textFont;
-          font-size: 1.5em;
-          margin-top: 0.5vw;
-        }
-        input {
-          width: 2vw;
-          height: 2vw;
-          font-size: 1.5em;
-        }
+        font-size: 2em;
+        margin-top: 1.5vw;
       }
     }
-    #volt {
-      width: 90%;
-      position: relative;
-      left: 2vw;
-      height: 8vw;
-      transition: 0.3s;
-      background-color: white;
-      display: grid;
-      grid-template-columns: 30% 50% 1fr;
-      border-radius: 0.3vw;
-      margin-top: 1vw;
-      img {
-        width: 8vw;
-        border-radius: 0.3vw;
-      }
-      #ros1 {
-        @extend reset;
-        font-size: 1.6em;
-        margin: 0.5vw;
-        margin-top: 2vw;
-        font-family: $textFont;
-      }
-      #ros2 {
-        @extend reset;
-        font-family: $textFont;
-        font-size: 1.1em;
-        margin-left: 1vw;
-        font-weight: bold;
-        #ros2Span {
-          text-decoration: line-through;
-        }
-      }
-      #ros3 {
-        @extend reset;
-        margin-left: 2vw;
-        font-family: $textFont;
-        color: rgba($color: black, $alpha: 0.7);
-      }
-      #quantity {
-        #ros4 {
-          font-family: $textFont;
-          font-size: 1.5em;
-          margin-top: 0.5vw;
-        }
-        input {
-          width: 2vw;
-          height: 2vw;
-          font-size: 1.5em;
-        }
-      }
+    .radioActive {
+      background-color: $theGreen;
     }
   }
 }

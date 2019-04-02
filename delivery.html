@@ -62,7 +62,23 @@
       <div class="progressLine"></div>
     </div>
     <main>
-      <div id="purchase"></div>
+      <div id="deliveryMethod">
+        <div id="methodBox">
+          <h2>Shipping Options</h2>
+          <div class="selectMethod radioActive" id="selectMethod1">
+            <div class="pseoduRadio"></div>
+            <p class="selectTxt">
+              Pick up at festival (free)
+            </p>
+          </div>
+          <div class="selectMethod" id="selectMethod2">
+            <div class="pseoduRadio"></div>
+            <p class="selectTxt">
+              Ship to home (50,- DKK)
+            </p>
+          </div>
+        </div>
+      </div>
       <div id="summary">
         <div id="info">
           <h2>Summary</h2>
@@ -103,6 +119,14 @@
                 <p id="momsValue">94.75,- DKK</p>
               </div>
             </div>
+            <div id="addDelivery">
+              <div id="deliveryTxt">
+                <p>Delivery</p>
+              </div>
+              <div id="deliveryValue">
+                <p>50,- DKK</p>
+              </div>
+            </div>
 
             <div id="total">
               <p id="totalTxt">
@@ -129,5 +153,5 @@
       </div>
     </main>
   </body>
-  <script src="index.js"></script>
+  <script src="delivery.js"></script>
 </html>

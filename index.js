@@ -1,7 +1,7 @@
 "use strict";
 import TweenMax from "gsap/TweenMax";
 import Draggable from "gsap/Draggable";
-import { link } from "fs";
+
 const swapService = 179;
 const voltCharger = 200;
 
@@ -54,6 +54,15 @@ function updateSummary() {
   document.querySelector("#priceSpan2").textContent = chargerTotal;
   let moms = ((swapServiceTotal + chargerTotal) / 100) * 25;
   document.querySelector("#momsValue").textContent = moms + ",- DKK";
-  document.querySelector("#totalValue").textContent =
-    moms + swapServiceTotal + chargerTotal;
+  let sum = moms + swapServiceTotal + chargerTotal;
+  document.querySelector("#totalValue").textContent = sum;
+  addToRestDB(input1.value, input2.value, sum);
+}
+function addToRestDB(value1, value2, value3) {
+  const summaryValues = {
+    service: value1,
+    charger: value2,
+    total: value3
+  };
+  console.log(summaryValues);
 }

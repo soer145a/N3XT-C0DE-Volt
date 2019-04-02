@@ -1,0 +1,21 @@
+reset {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  height: 30px;
+  padding: 5px 5px;
+  font-size: 2em;
+  line-height: 1.5;
+  border: none;
+  border-bottom: solid black 2px;
+  color: #555555;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+/*# sourceMappingURL=/form.4fcb22c8.css.map */
