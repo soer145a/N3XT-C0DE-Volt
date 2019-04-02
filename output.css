@@ -159,14 +159,10 @@ header #basket #basketIcon img {
 }
 
 #checkout {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-
-#checkout #payment-options {
-  height: 70vh;
-  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 200px;
+  position: relative;
 }
 
 reset, #checkout, #buttons .button p, main #purchase #roskilde #ros1, main #purchase #roskilde #ros2, main #purchase #roskilde #ros3, main #purchase #volt #ros1, main #purchase #volt #ros2, main #purchase #volt #ros3 {
