@@ -117,22 +117,62 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"signUp.js":[function(require,module,exports) {
+})({"checkout.js":[function(require,module,exports) {
 "use strict";
 
 window.addEventListener("DOMContentLoaded", init);
+var cc = document.querySelector("#cc");
+var paypal = document.querySelector("#paypal");
+var mobilepay = document.querySelector("#mobilepay");
+var ccText = document.querySelector("#cc-form");
+var ppText = document.querySelector("#paypal-text");
+var mpText = document.querySelector("#mobilepay-text");
 
 function init() {
-  console.log("INIT");
-  var params = new URL(document.location).searchParams;
-  var charger = params.get("chargers"); // is the string "Jonathan Smith".
+  cc.addEventListener("click", function () {
+    cc.classList.add("active");
+    mobilepay.classList.remove("active");
+    paypal.classList.remove("active"); //
 
-  var service = params.get("service"); // is the number 18
+    ccText.classList.add("opened");
+    mpText.classList.remove("opened");
+    ppText.classList.remove("opened");
+    checkButtons();
+  });
+  paypal.addEventListener("click", function () {
+    //Buttons
+    paypal.classList.add("active");
+    cc.classList.remove("active");
+    mobilepay.classList.remove("active"); //Text Below
 
-  var total = params.get("total");
-  var id = params.get("id");
-  console.log(charger + " " + service + " " + total + " " + id);
-  console.log(id);
+    ppText.classList.add("opened");
+    ccText.classList.remove("opened");
+    mpText.classList.remove("opened");
+    checkButtons();
+  });
+  mobilepay.addEventListener("click", function () {
+    mobilepay.classList.add("active");
+    cc.classList.remove("active");
+    paypal.classList.remove("active"); //
+
+    mpText.classList.add("opened");
+    ppText.classList.remove("opened");
+    ccText.classList.remove("opened");
+    checkButtons();
+  });
+}
+
+function checkButtons() {
+  if (cc.classList.contains("active") === true) {
+    paypal.classList.remove("active");
+    mobilepay.classList.remove("active");
+  } else if (paypal.classList.contains("active") === true) {
+    cc.classList.remove("active");
+    mobilepay.classList.remove("active");
+  } else {
+    paypal.classList.remove("active");
+    cc.classList.remove("active");
+  }
 }
 },{}],"../../../Users/Joshua/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -162,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53085" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64388" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -337,5 +377,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../Users/Joshua/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","signUp.js"], null)
-//# sourceMappingURL=/signUp.db21f328.js.map
+},{}]},{},["../../../Users/Joshua/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","checkout.js"], null)
+//# sourceMappingURL=/checkout.e81ba27f.js.map

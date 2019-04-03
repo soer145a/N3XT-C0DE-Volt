@@ -1,0 +1,151 @@
+#checkout-box {
+    height: 70vh;
+    
+    background-color: white;
+    margin: auto;
+    width:100%;
+    display:grid;
+    margin-top: 5vw;
+    font-family:$textFont;
+
+    #payment-options {
+        display:grid;
+        height:50%;
+        grid-row-gap:2vmin;
+    }
+
+    #pay-with-heading {
+        text-align:center;
+        height:33.33%;
+
+        
+    }
+
+
+    #next {
+        width:50%;
+    }
+
+    .payment-option {
+        font-size:0.8em;
+        margin-left:1vw;
+        margin-right:1vw;
+        background:gray;
+        display:flex;
+        align-items:center;
+        border-radius: 6px;
+        &:hover {
+            cursor:pointer;
+           
+        }
+
+        .circle {
+            border-radius:100%;
+            background-color:white;
+            width:3vmin;
+            height:3vmin;
+            margin:2vmin;
+        }
+        
+    }
+
+    .payment-option-text {
+        color:#C4C4C4;
+        text-align:center;
+        height:20vh;
+        display:none;
+        
+        p {
+            align-self:center;
+            grid-columns:1/3;
+        }
+        
+    }
+
+    #cc {
+
+    }
+
+    #paypal {
+        
+    }
+
+    #mobilepay {
+
+    }
+
+    .opened {
+        display:grid;
+        
+    }
+    //Styling the credit card form grid below, it has the class .opened so it already is a grid.
+    #cc-form {
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width:80%;
+        margin:auto;
+        justify-items:left;
+        grid-column-gap:3vmin;
+
+        #ccNum-label {
+            grid-column:1/5;
+            width:100%;
+            text-align:left;
+            
+        }
+
+        #ccMonth-label {
+            grid-column:1/2;
+            width:100%;
+            text-align:left;
+            width:50%;
+        }
+
+        #ccYear-label {
+            grid-column:2/3;
+            width:100%;
+            text-align:left;
+            width:50%;
+        }
+
+        #ccCvc-label {
+            grid-column:4/5;
+            width:100%;
+            text-align:left;
+            width:50%;
+        }
+
+        #ccName-label {
+            grid-column:1/5;
+            width:100%;
+            text-align:left;
+        }
+
+
+        input {
+            border: none;
+            border-bottom: 2px solid $theGray;
+            width:100%;
+           
+        }
+    }
+
+    .closed {
+        display:none;
+    }
+
+    .active {
+        transition:2s smooth;
+        background:white;
+        border: 2px solid $theGreen;
+
+        .circle {
+            background-color:$theGreen;
+        }
+    }
+
+    .inactive {
+    }
+
+
+}
