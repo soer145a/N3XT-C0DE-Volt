@@ -14179,9 +14179,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var swapService = 179;
 var voltCharger = 200;
-var chargerTotal;
-var swapServiceTotal;
-var sum;
+var chargerTotal = 1;
+var swapServiceTotal = 1;
+var sum = 378;
+var input1 = document.querySelector("#quantityInput1");
+var input2 = document.querySelector("#quantityInput2");
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -14219,8 +14221,6 @@ function checkButtons() {
 }
 
 function updateSummary() {
-  var input1 = document.querySelector("#quantityInput1");
-  var input2 = document.querySelector("#quantityInput2");
   console.log("Update Sumary");
   document.querySelector("#productAmount1").textContent = input1.value + "x";
   document.querySelector("#productAmount2").textContent = input2.value + "x";
@@ -14236,7 +14236,7 @@ function updateSummary() {
 
 function addToURL() {
   var localId = Math.random().toString(36).substring(2, 15);
-  var urlString = "?id=" + localId + "&chargers=" + chargerTotal + "&service=" + swapServiceTotal + "&total=" + sum;
+  var urlString = "?id=" + localId + "&chargers=" + input1.value + "&service=" + input2.value + "&total=" + sum;
   window.location.assign("signUp.html" + urlString);
 }
 },{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/Draggable":"node_modules/gsap/Draggable.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -14267,7 +14267,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65388" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

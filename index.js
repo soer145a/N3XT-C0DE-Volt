@@ -4,9 +4,11 @@ import Draggable from "gsap/Draggable";
 
 const swapService = 179;
 const voltCharger = 200;
-let chargerTotal;
-let swapServiceTotal;
-let sum;
+let chargerTotal = 1;
+let swapServiceTotal = 1;
+let sum = 378;
+let input1 = document.querySelector("#quantityInput1");
+let input2 = document.querySelector("#quantityInput2");
 
 window.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -47,8 +49,6 @@ function checkButtons() {
   }
 }
 function updateSummary() {
-  let input1 = document.querySelector("#quantityInput1");
-  let input2 = document.querySelector("#quantityInput2");
   console.log("Update Sumary");
 
   document.querySelector("#productAmount1").textContent = input1.value + "x";
@@ -72,9 +72,9 @@ function addToURL() {
     "?id=" +
     localId +
     "&chargers=" +
-    chargerTotal +
+    input1.value +
     "&service=" +
-    swapServiceTotal +
+    input2.value +
     "&total=" +
     sum;
 

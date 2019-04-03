@@ -22,7 +22,7 @@ function makeObject() {
   let urlCharger = params.get("chargers");
   let urlService = params.get("service");
   let urlTotal = params.get("total");
-  let id = params.get("id");
+  let urlId = params.get("id");
 
   console.log("OBJECT CREATION");
   let input_firstName = document.querySelector("#firstName-input");
@@ -30,15 +30,23 @@ function makeObject() {
   let input_email = document.querySelector("#email-input");
   let input_number = document.querySelector("#number-input");
   let input_password = document.querySelector("#password-input");
-  let data = {
+  const data = {
     service: urlService,
+    id: urlId,
     charger: urlCharger,
     total: urlTotal,
     firstName: input_firstName.value,
     lastName: input_lastName.value,
     email: input_email.value,
+    country: "-placeholder country-",
+    zipCode: "-placeholder zipCode",
     phoneNumber: input_number.value,
-    password: input_password.value
+    password: input_password.value,
+    ccNumber: "-placeholder ccN-",
+    ccYear: "-placeholder ccY-",
+    ccMonth: "-placeholder ccM-",
+    ccName: "-placeholder ccN-",
+    ccCvv: "-placeholder ccCvv-"
   };
   console.log(data);
   post(data);
@@ -51,11 +59,11 @@ function post(data) {
     method: "post",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "h-apikey": "b9a6eb9dec1772512d2c6f9deeafcf2fbd7e2",
+      "x-apikey": "5ca48775df5d634f46ecb225",
       "cache-control": "no-cache"
     },
     body: postData
   })
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(res => window.location.assign("delivery.html?id=" + data.id));
 }

@@ -312,7 +312,7 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
 #signUp-block #or {
   justify-self: center;
   align-self: center;
-  color: #C4C4C4;
+  color: #c4c4c4;
   font-size: 2em;
 }
 
@@ -325,20 +325,20 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
 }
 
 #signUp-block #signup-fb-btn {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
   border-radius: 6px;
 }
 
 #signUp-block #signup-google-btn {
-  background: #DD4B39;
+  background: #dd4b39;
   color: white;
   border-radius: 6px;
 }
 
 #signUp-block #signup-email-btn {
-  background: #FFFFFF;
-  border: 1px solid #9BB140;
+  background: #ffffff;
+  border: 1px solid #9bb140;
   box-sizing: border-box;
   border-radius: 6px;
   color: #9bbe40;
@@ -363,20 +363,20 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
 
 #signUp-block-form input {
   border: none;
-  border-bottom: 2px solid #C4C4C4;
+  border-bottom: 2px solid #c4c4c4;
   width: 40%;
   margin: auto;
 }
 
 #signUp-block-form label {
-  color: #C4C4C4;
+  color: #c4c4c4;
   width: 40%;
   margin: auto;
 }
 
-#signUp-block-form #signup-submit {
-  background: #9BBE40;
-  border: 2px solid #9BBE40;
+#signup-submit {
+  background: #9bbe40;
+  border: 2px solid #9bbe40;
   box-sizing: border-box;
   border-radius: 6px;
   width: 8%;
@@ -619,6 +619,7 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
   grid-template-columns: 1fr 1fr;
   width: 90%;
   margin: auto;
+  opacity: 0;
 }
 
 #addDelivery #deliveryTxt p {

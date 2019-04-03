@@ -120,11 +120,58 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"delivery.js":[function(require,module,exports) {
 "use strict";
 
-var myFlag = false;
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   console.log("INIT");
+  getRestDB();
+}
+
+function getRestDB() {
+  console.log("GET");
+  fetch("https://voltcustomers-f457.restdb.io/rest/customer-details", {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "5ca48775df5d634f46ecb225",
+      "cache-control": "no-cache"
+    }
+  }).then(function (e) {
+    return e.json();
+  }).then(function (e) {
+    return checkForCorrctUser(e);
+  });
+}
+
+function checkForCorrctUser(e) {
+  var params = new URL(window.location).searchParams;
+  var id = params.get("id");
+  e.forEach(function (user) {
+    if (user.id == id) {
+      updateSummary(user);
+    } else {
+      console.log("Not me!");
+    }
+  });
+}
+
+function updateSummary(user) {
+  console.log(user);
+  var swapService = 179;
+  var voltCharger = 200;
+  var chargerTotal = 1;
+  var swapServiceTotal = 1;
+  var sum = 378;
+  document.querySelector("#productAmount1").textContent = user.charger + "x";
+  document.querySelector("#productAmount2").textContent = user.service + "x";
+  swapServiceTotal = user.service * swapService;
+  chargerTotal = user.charger * voltCharger;
+  document.querySelector("#priceSpan1").textContent = swapServiceTotal;
+  document.querySelector("#priceSpan2").textContent = chargerTotal;
+  var moms = (swapServiceTotal + chargerTotal) / 100 * 25;
+  document.querySelector("#momsValue").textContent = moms + ",- DKK";
+  sum = moms + swapServiceTotal + chargerTotal;
+  document.querySelector("#totalValue").textContent = sum;
   document.querySelector("#selectMethod1").addEventListener("click", function () {
     document.querySelector("#selectMethod1").classList.add("radioActive");
     document.querySelector("#selectMethod2").classList.remove("radioActive");
@@ -133,11 +180,6 @@ function init() {
     document.querySelector("#selectMethod2").classList.add("radioActive");
     document.querySelector("#selectMethod1").classList.remove("radioActive");
   });
-  updateSummary();
-}
-
-function updateSummary() {
-  console.log("UPDATE");
 }
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -167,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57832" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51717" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
