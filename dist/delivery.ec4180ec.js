@@ -162,6 +162,7 @@ function updateSummary(user) {
   var chargerTotal = 1;
   var swapServiceTotal = 1;
   var sum = 378;
+  var newSum;
   document.querySelector("#productAmount1").textContent = user.charger + "x";
   document.querySelector("#productAmount2").textContent = user.service + "x";
   swapServiceTotal = user.service * swapService;
@@ -175,10 +176,18 @@ function updateSummary(user) {
   document.querySelector("#selectMethod1").addEventListener("click", function () {
     document.querySelector("#selectMethod1").classList.add("radioActive");
     document.querySelector("#selectMethod2").classList.remove("radioActive");
+    document.querySelector("#addDelivery").style.opacity = 0;
+    console.log("-50");
+    newSum = sum - 50;
+    document.querySelector("#totalValue").textContent = newSum;
   });
   document.querySelector("#selectMethod2").addEventListener("click", function () {
     document.querySelector("#selectMethod2").classList.add("radioActive");
     document.querySelector("#selectMethod1").classList.remove("radioActive");
+    console.log("+50");
+    document.querySelector("#addDelivery").style.opacity = 1;
+    newSum = sum + 50;
+    document.querySelector("#totalValue").textContent = newSum;
   });
 }
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

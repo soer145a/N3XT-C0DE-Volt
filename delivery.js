@@ -39,6 +39,7 @@ function updateSummary(user) {
   let chargerTotal = 1;
   let swapServiceTotal = 1;
   let sum = 378;
+  let newSum;
 
   document.querySelector("#productAmount1").textContent = user.charger + "x";
   document.querySelector("#productAmount2").textContent = user.service + "x";
@@ -54,9 +55,18 @@ function updateSummary(user) {
   document.querySelector("#selectMethod1").addEventListener("click", () => {
     document.querySelector("#selectMethod1").classList.add("radioActive");
     document.querySelector("#selectMethod2").classList.remove("radioActive");
+    document.querySelector("#addDelivery").style.opacity = 0;
+    console.log("-50");
+    newSum = sum - 50;
+    document.querySelector("#totalValue").textContent = newSum;
   });
+
   document.querySelector("#selectMethod2").addEventListener("click", () => {
     document.querySelector("#selectMethod2").classList.add("radioActive");
     document.querySelector("#selectMethod1").classList.remove("radioActive");
+    console.log("+50");
+    document.querySelector("#addDelivery").style.opacity = 1;
+    newSum = sum + 50;
+    document.querySelector("#totalValue").textContent = newSum;
   });
 }
