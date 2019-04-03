@@ -39,20 +39,38 @@ $theGray: #c4c4c4;
     background: #3b5998;
     color: white;
     border-radius: 6px;
+    transition: 0.2s linear;
+    &:hover{
+      background:#9bb140;
+      color:white;
+      cursor:pointer;
+    }
   }
 
   #signup-google-btn {
     background: #dd4b39;
     color: white;
     border-radius: 6px;
+    transition: 0.2s linear;
+    &:hover{
+      background:#9bb140;
+      color:white;
+      cursor:pointer;
+    }
   }
   #signup-email-btn {
     background: #ffffff;
     border: 1px solid #9bb140;
     box-sizing: border-box;
+    transition: 0.2s linear;
 
     border-radius: 6px;
     color: $theGreen;
+    &:hover{
+      background:#9bb140;
+      color:white;
+      cursor:pointer;
+    }
   }
 }
 
@@ -93,4 +111,16 @@ $theGray: #c4c4c4;
   border-radius: 6px;
   width: 8%;
   height: 60%;
+  align-self:center;
+  justify-self:center;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  transition: 0.2s linear;
+
+  &:hover{
+    cursor:pointer;
+    background-color:white;
+    
+  }
 }
