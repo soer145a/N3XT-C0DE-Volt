@@ -1,11 +1,12 @@
 "use strict";
 import TweenMax from "gsap/TweenMax";
 import Draggable from "gsap/Draggable";
-import { url } from "inspector";
-import { URLSearchParams } from "url";
 
 const swapService = 179;
 const voltCharger = 200;
+let chargerTotal;
+let swapServiceTotal;
+let sum;
 
 window.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -26,8 +27,9 @@ function init() {
   document
     .querySelector("#quantityInput2")
     .addEventListener("change", updateSummary);
-  let myParams = new URLSearchParams();
+  document.querySelector("#next").addEventListener("click", addToURL);
 }
+
 function checkButtons() {
   console.log("check Buttons");
   let button1 = document.querySelector("#button1");
@@ -51,17 +53,17 @@ function updateSummary() {
 
   document.querySelector("#productAmount1").textContent = input1.value + "x";
   document.querySelector("#productAmount2").textContent = input2.value + "x";
-  let swapServiceTotal = input1.value * swapService;
-  let chargerTotal = input2.value * voltCharger;
+  swapServiceTotal = input1.value * swapService;
+  chargerTotal = input2.value * voltCharger;
   document.querySelector("#priceSpan1").textContent = swapServiceTotal;
   document.querySelector("#priceSpan2").textContent = chargerTotal;
   let moms = ((swapServiceTotal + chargerTotal) / 100) * 25;
   document.querySelector("#momsValue").textContent = moms + ",- DKK";
-  let sum = moms + swapServiceTotal + chargerTotal;
+  sum = moms + swapServiceTotal + chargerTotal;
   document.querySelector("#totalValue").textContent = sum;
-  addToURL(input1.value, input2.value, sum);
 }
-function addToURL(value1, value2, value3) {
+
+function addToURL() {
   let localId =
     Math.random()
       .toString(36)
@@ -69,23 +71,16 @@ function addToURL(value1, value2, value3) {
     Math.random()
       .toString(36)
       .substring(2, 15);
-  /*  const customer = {
-    id: localId,
-    service: value1,
-    charger: value2,
-    total: value3,
-    firstName: "",
-    lastName: "",
-    email: "",
-    country: "",
-    zipCode: "",
-    phoneNumber: "",
-    password: "",
-    creditCardNumber: "",
-    creditCardYear: "",
-    creditCardMonth: "",
-    creditCardCvv: ""
-  };
-  myParams.append("localId" + localId);
-  console.log(customer); */
+
+  let urlString =
+    "?&id=" +
+    localId +
+    "&chargers=" +
+    chargerTotal +
+    "&service=" +
+    swapServiceTotal +
+    "&total=" +
+    sum;
+  console.log(urlString);
+  window.location.assign("signUp.html" + urlString);
 }

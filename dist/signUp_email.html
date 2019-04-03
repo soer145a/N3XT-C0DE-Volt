@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Volt side 1</title>
-    <link rel="stylesheet" href="output.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/output.c16d2514.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
     <header>
       <div id="logo">
-        <img src="images/Logo.png" alt="" />
+        <img src="/Logo.40c5b796.png" alt="">
       </div>
       <div id="nav">
         <div class="navItem">
@@ -45,7 +42,7 @@
         <div id="basket">
           <div id="basketIcon">
             <div id="counter"><p>10</p></div>
-            <img src="images/shopping-cart.svg" alt="" />
+            <img src="/shopping-cart.77b3966a.svg" alt="">
           </div>
         </div>
       </div>
@@ -62,22 +59,22 @@
       <div class="progressLine"></div>
     </div>
     <main>
-      <div id="signUp-block">
-        <h1>Sign in Here!</h1>
+      <form id="signUp-block-form">
+        <h1>Account Details</h1>
+        <label for="firstName-input">First Name</label>
+        <input type="text" name="firstName" id="firstName-input">
+        <label for="lastName-input">Last Name</label>
+        <input type="text" name="lastName" id="lastName-input">
+        <label for="email-input">Email Address</label>
+        <input type="email" name="email" id="email-input" required="">
+        <label for="number-input">Phone Number <span>*</span></label>
+        <input type="number" name="number" id="number-input" required="">
+        <label for="password-input">Password<span>*</span></label>
+        <input type="password" name="password" id="password-input">
+        <input type="submit" value="Sign Up" id="signup-submit">
+      </form>
 
-        <button id="signup-fb-btn" class="signup-btn">
-          Sign in with Facebook
-        </button>
-        <button id="signup-google-btn" class="signup-btn">
-          Sign in with Google
-        </button>
-        <p id="or">or</p>
-
-        <button id="signup-email-btn" class="signup-btn">
-          Sign up with email
-        </button>
-      </div>
     </main>
   </body>
-  <script src="signUp.js"></script>
+  <script src="/signUp_email.31481506.js"></script>
 </html>
