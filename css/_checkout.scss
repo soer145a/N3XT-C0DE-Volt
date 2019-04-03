@@ -155,9 +155,12 @@
       height: 80%;
       border: 2px solid #cdcdcd;
       border-radius: 6px;
+      transition:0.2s linear;
 
       &:hover {
         cursor: pointer;
+        background-color: $theGreen;
+        color:white;
       }
 
       p {
@@ -168,10 +171,15 @@
     #complete-purchase {
       height: 80%;
       border: 2px solid $theGreen;
+      color:white;
+      background:$theGreen;
       border-radius: 6px;
+      transition:0.2s linear;
 
       &:hover {
         cursor: pointer;
+        background:white;
+        color:$theGreen;
       }
 
       p {
