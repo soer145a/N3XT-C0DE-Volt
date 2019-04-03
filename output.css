@@ -278,6 +278,13 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
   width: 5vw;
   height: 2vw;
   border-radius: 6px;
+  transition: 0.2s linear;
+}
+
+#navigation .navButton:hover {
+  cursor: pointer;
+  background-color: #9bbe40;
+  color: white;
 }
 
 #navigation .navButton p {

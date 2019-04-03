@@ -20,6 +20,14 @@ $theGreen: #9bbe40;
     width: 5vw;
     height: 2vw;
     border-radius: 6px;
+    transition:0.2s linear;
+    &:hover{
+      cursor:pointer;
+      background-color:$theGreen;
+      color:white;
+      
+    }
+
     p {
       @extend reset;
       text-align: center;
