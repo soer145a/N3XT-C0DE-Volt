@@ -70,11 +70,21 @@
         
     }
 
+    //Setting text size inside of the opening text boxes
+    #paypal-text {
+        font-size:1.5em;
+    }
+
+    #mobilepay-text {
+        font-size:1.5em;
+    }
+
     #mobilepay {
 
     }
 
     .opened {
+        transition: 2s linear;
         display:grid;
         
     }
@@ -86,6 +96,7 @@
         margin:auto;
         justify-items:left;
         grid-column-gap:3vmin;
+        font-family:$textFont;
 
         #ccNum-label {
             grid-column:1/5;
@@ -130,9 +141,6 @@
         }
     }
 
-    .closed {
-        display:none;
-    }
 
     .active {
         transition:2s smooth;
@@ -146,6 +154,55 @@
 
     .inactive {
     }
+
+    //Styling the bottom buttons
+    #navBtns {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        font-family:$textFont;
+        margin-left:1vw;
+        margin-right:1vw;
+        align-self:center;
+        
+
+        #back {           
+            width:40%;
+            height:80%;
+            border: 2px solid #CDCDCD;
+            border-radius: 6px;
+           
+            &:hover {
+                cursor:pointer;
+               
+            }
+
+            p {
+                
+                text-align:center;
+
+            }
+        }
+
+        #complete-purchase {
+            height:80%;
+            border: 2px solid $theGreen;
+            border-radius: 6px;
+
+            &:hover {
+                cursor:pointer;
+               
+            }
+        
+
+            p {
+                text-align:center;
+            }
+        }
+        
+
+    }
+
+    
 
 
 }
