@@ -1,4 +1,4 @@
-reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p,
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p, #thanks_block .linkButton p,
 body,
 header #nav .navItem,
 header #nav .navItem p,
@@ -158,7 +158,7 @@ header #basket #basketIcon img {
   background-color: #9bbe40;
 }
 
-reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p {
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p, #thanks_block .linkButton p {
   margin: 0;
   padding: 0;
 }
@@ -255,7 +255,7 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
   font-size: 1.5em;
 }
 
-reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p {
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p, #thanks_block .linkButton p {
   margin: 0;
   padding: 0;
 }
@@ -383,7 +383,176 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
   height: 60%;
 }
 
-reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p {
+#checkout-box {
+  height: 70vh;
+  background-color: white;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  margin-top: 5vw;
+  font-family: "Roboto", sans-serif;
+}
+
+#checkout-box #payment-options {
+  display: grid;
+  height: 50%;
+  grid-row-gap: 2vmin;
+}
+
+#checkout-box #pay-with-heading {
+  text-align: center;
+  height: 33.33%;
+}
+
+#checkout-box #next {
+  width: 50%;
+}
+
+#checkout-box .payment-option {
+  font-size: 0.8em;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+#checkout-box .payment-option:hover {
+  cursor: pointer;
+}
+
+#checkout-box .payment-option .circle {
+  border-radius: 100%;
+  background-color: white;
+  width: 3vmin;
+  height: 3vmin;
+  margin: 2vmin;
+}
+
+#checkout-box .payment-option-text {
+  color: #c4c4c4;
+  text-align: center;
+  height: 20vh;
+  display: none;
+}
+
+#checkout-box .payment-option-text p {
+  align-self: center;
+  grid-columns: 1/3;
+}
+
+#checkout-box #paypal-text {
+  font-size: 1.5em;
+}
+
+#checkout-box #mobilepay-text {
+  font-size: 1.5em;
+}
+
+#checkout-box .opened {
+  transition: 2s linear;
+  display: grid;
+}
+
+#checkout-box #cc-form {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  justify-items: left;
+  grid-column-gap: 3vmin;
+  font-family: "Roboto", sans-serif;
+}
+
+#checkout-box #cc-form #ccNum-label {
+  grid-column: 1/5;
+  width: 100%;
+  text-align: left;
+}
+
+#checkout-box #cc-form #ccMonth-label {
+  grid-column: 1/2;
+  width: 100%;
+  text-align: left;
+  width: 50%;
+}
+
+#checkout-box #cc-form #ccYear-label {
+  grid-column: 2/3;
+  width: 100%;
+  text-align: left;
+  width: 50%;
+}
+
+#checkout-box #cc-form #ccCvc-label {
+  grid-column: 4/5;
+  width: 100%;
+  text-align: left;
+  width: 50%;
+}
+
+#checkout-box #cc-form #ccName-label {
+  grid-column: 1/5;
+  width: 100%;
+  text-align: left;
+}
+
+#checkout-box #cc-form input {
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+  width: 100%;
+}
+
+#checkout-box .active {
+  transition: 2s smooth;
+  background: white;
+  border: 2px solid #9bbe40;
+}
+
+#checkout-box .active .circle {
+  background-color: #9bbe40;
+}
+
+#checkout-box #navBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Roboto", sans-serif;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  align-self: center;
+}
+
+#checkout-box #navBtns #back {
+  width: 40%;
+  height: 80%;
+  border: 2px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+#checkout-box #navBtns #back:hover {
+  cursor: pointer;
+}
+
+#checkout-box #navBtns #back p {
+  text-align: center;
+}
+
+#checkout-box #navBtns #complete-purchase {
+  height: 80%;
+  border: 2px solid #9bbe40;
+  border-radius: 6px;
+}
+
+#checkout-box #navBtns #complete-purchase:hover {
+  cursor: pointer;
+}
+
+#checkout-box #navBtns #complete-purchase p {
+  text-align: center;
+}
+
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p, #thanks_block .linkButton p {
   margin: 0;
   padding: 0;
 }
@@ -403,7 +572,7 @@ main {
   position: absolute;
 }
 
-reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p {
+reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #summary #info #sum .sumCard .sumHead .price p, #summary #info #sum .sumCard .sumInfo, #summary #info #payment #values #payment1 #moms, #summary #info #payment #values #payment2 #momsValue, #summary #info #payment #total #totalTxt, #summary #info #payment #total #totalValue, #navigation .navButton p, #signUp-block h1, #signUp-block #or, #signUp-block-form h1, #buttons .button p, #purchase #roskilde #ros1, #purchase #roskilde #ros2, #purchase #roskilde #ros3, #purchase #volt #ros1, #purchase #volt #ros2, #purchase #volt #ros3, #deliveryMethod h2, #deliveryMethod #methodBox .selectMethod .selectTxt, #addDelivery #deliveryTxt p, #addDelivery #deliveryValue p, #thanks_block .linkButton p {
   margin: 0;
   padding: 0;
 }
@@ -633,4 +802,55 @@ reset, #summary #info h2, #summary #info #sum .sumCard .sumHead .product p, #sum
   font-weight: bold;
   font-size: 1.5em;
   float: right;
+}
+
+#thanks_block {
+  grid-column: 1/3;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-family: "Roboto", sans-serif;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5vw;
+}
+
+#thanks_block h1 {
+  font-family: "helvetica", sans-serif;
+  color: #9bbe40;
+  text-align: center;
+}
+
+#thanks_block #text {
+  width: 40vw;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+}
+
+#thanks_block #text h2 {
+  color: #9bbe40;
+}
+
+#thanks_block .linkButton {
+  background-color: #9bbe40;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 1vw;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#thanks_block .linkButton:hover {
+  transform: scale(1.05);
+}
+
+#thanks_block .linkButton p {
+  text-align: center;
+  margin-top: 0.8vw;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }

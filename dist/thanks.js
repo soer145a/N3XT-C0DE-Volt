@@ -117,99 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"delivery.js":[function(require,module,exports) {
-"use strict";
+})({"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-var sum = 378;
-window.addEventListener("DOMContentLoaded", init);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-function init() {
-  console.log("INIT");
-  getRestDB();
+  return bundleURL;
 }
 
-function getRestDB() {
-  console.log("GET");
-  fetch("https://voltcustomers-f457.restdb.io/rest/customer-details", {
-    method: "get",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "5ca48775df5d634f46ecb225",
-      "cache-control": "no-cache"
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
-  }).then(function (e) {
-    return e.json();
-  }).then(function (e) {
-    return checkForCorrctUser(e);
-  });
+  }
+
+  return '/';
 }
 
-function checkForCorrctUser(e) {
-  var params = new URL(window.location).searchParams;
-  var id = params.get("id");
-  e.forEach(function (user) {
-    if (user.id == id) {
-      updateSummary(user);
-      document.querySelector("#next").addEventListener("click", function () {
-        updateUser(user);
-      });
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
     }
-  });
+
+    cssTimeout = null;
+  }, 50);
 }
 
-function updateSummary(user) {
-  console.log(user);
-  var swapService = 179;
-  var voltCharger = 200;
-  var chargerTotal = 1;
-  var swapServiceTotal = 1;
-  document.querySelector("#productAmount1").textContent = user.charger + "x";
-  document.querySelector("#productAmount2").textContent = user.service + "x";
-  swapServiceTotal = user.service * swapService;
-  chargerTotal = user.charger * voltCharger;
-  document.querySelector("#priceSpan1").textContent = swapServiceTotal;
-  document.querySelector("#priceSpan2").textContent = chargerTotal;
-  var moms = (swapServiceTotal + chargerTotal) / 100 * 25;
-  document.querySelector("#momsValue").textContent = moms + ",- DKK";
-  sum = moms + swapServiceTotal + chargerTotal;
-  document.querySelector("#totalValue").textContent = sum;
-  document.querySelector("#selectMethod1").addEventListener("click", function (e) {
-    e.preventDefault();
-    updateSummaryclick1(user);
-    console.log("CLICK");
-  });
-  document.querySelector("#selectMethod2").addEventListener("click", function (e) {
-    e.preventDefault();
-    updateSummaryClick2(user);
-    console.log("CLICK");
-  });
-}
-
-function updateSummaryclick1(user) {
-  document.querySelector("#selectMethod1").classList.add("radioActive");
-  document.querySelector("#selectMethod2").classList.remove("radioActive");
-  console.log("+50");
-  document.querySelector("#addDelivery").style.opacity = 0;
-  sum = parseInt(sum - 50);
-  console.log(sum);
-  document.querySelector("#totalValue").textContent = sum;
-}
-
-function updateSummaryClick2(user) {
-  document.querySelector("#selectMethod2").classList.add("radioActive");
-  document.querySelector("#selectMethod1").classList.remove("radioActive");
-  console.log("-50");
-  document.querySelector("#addDelivery").style.opacity = 1;
-  sum = parseInt(sum + 50);
-  console.log(sum);
-  document.querySelector("#totalValue").textContent = sum;
-}
-
-function updateUser(user) {
-  console.log(user);
-  window.location.assign("checkout.html?id=" + user.id);
-}
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -237,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51717" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62017" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -412,5 +387,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","delivery.js"], null)
-//# sourceMappingURL=/delivery.ec4180ec.js.map
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/thanks.js.map

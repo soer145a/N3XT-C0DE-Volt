@@ -1,4 +1,5 @@
 "use strict";
+let sum = 378;
 
 window.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -27,8 +28,9 @@ function checkForCorrctUser(e) {
   e.forEach(user => {
     if (user.id == id) {
       updateSummary(user);
-    } else {
-      console.log("Not me!");
+      document.querySelector("#next").addEventListener("click", () => {
+        updateUser(user);
+      });
     }
   });
 }
@@ -38,8 +40,6 @@ function updateSummary(user) {
   const voltCharger = 200;
   let chargerTotal = 1;
   let swapServiceTotal = 1;
-  let sum = 378;
-  let newSum;
 
   document.querySelector("#productAmount1").textContent = user.charger + "x";
   document.querySelector("#productAmount2").textContent = user.service + "x";
@@ -52,21 +52,40 @@ function updateSummary(user) {
   sum = moms + swapServiceTotal + chargerTotal;
   document.querySelector("#totalValue").textContent = sum;
 
-  document.querySelector("#selectMethod1").addEventListener("click", () => {
-    document.querySelector("#selectMethod1").classList.add("radioActive");
-    document.querySelector("#selectMethod2").classList.remove("radioActive");
-    document.querySelector("#addDelivery").style.opacity = 0;
-    console.log("-50");
-    newSum = sum - 50;
-    document.querySelector("#totalValue").textContent = newSum;
+  document.querySelector("#selectMethod1").addEventListener("click", e => {
+    e.preventDefault();
+    updateSummaryclick1(user);
+    console.log("CLICK");
   });
 
-  document.querySelector("#selectMethod2").addEventListener("click", () => {
-    document.querySelector("#selectMethod2").classList.add("radioActive");
-    document.querySelector("#selectMethod1").classList.remove("radioActive");
-    console.log("+50");
-    document.querySelector("#addDelivery").style.opacity = 1;
-    newSum = sum + 50;
-    document.querySelector("#totalValue").textContent = newSum;
+  document.querySelector("#selectMethod2").addEventListener("click", e => {
+    e.preventDefault();
+    updateSummaryClick2(user);
+    console.log("CLICK");
   });
+}
+
+function updateSummaryclick1(user) {
+  document.querySelector("#selectMethod1").classList.add("radioActive");
+  document.querySelector("#selectMethod2").classList.remove("radioActive");
+  console.log("+50");
+  document.querySelector("#addDelivery").style.opacity = 0;
+  sum = parseInt(sum - 50);
+  console.log(sum);
+
+  document.querySelector("#totalValue").textContent = sum;
+}
+function updateSummaryClick2(user) {
+  document.querySelector("#selectMethod2").classList.add("radioActive");
+  document.querySelector("#selectMethod1").classList.remove("radioActive");
+  console.log("-50");
+  document.querySelector("#addDelivery").style.opacity = 1;
+  sum = parseInt(sum + 50);
+  console.log(sum);
+
+  document.querySelector("#totalValue").textContent = sum;
+}
+function updateUser(user) {
+  console.log(user);
+  window.location.assign("checkout.html?id=" + user.id);
 }
