@@ -14235,9 +14235,8 @@ function updateSummary() {
 }
 
 function addToURL() {
-  var localId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-  var urlString = "?&id=" + localId + "&chargers=" + chargerTotal + "&service=" + swapServiceTotal + "&total=" + sum;
-  console.log(urlString);
+  var localId = Math.random().toString(36).substring(2, 15);
+  var urlString = "?id=" + localId + "&chargers=" + chargerTotal + "&service=" + swapServiceTotal + "&total=" + sum;
   window.location.assign("signUp.html" + urlString);
 }
 },{"gsap/TweenMax":"node_modules/gsap/TweenMax.js","gsap/Draggable":"node_modules/gsap/Draggable.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -14268,7 +14267,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55999" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65388" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

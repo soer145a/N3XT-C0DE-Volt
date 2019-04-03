@@ -118,7 +118,68 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"signUp_email.js":[function(require,module,exports) {
+"use strict";
 
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  console.log("INIT");
+  document.querySelector("#signup-submit").addEventListener("click", checkForm);
+}
+
+function checkForm() {
+  console.log("Check form");
+  var form = document.querySelector("#signUp-block-form");
+  var valid = form.checkValidity();
+  console.log(valid);
+
+  if (valid == true) {
+    makeObject();
+  }
+}
+
+function makeObject() {
+  var params = new URL(window.location).searchParams;
+  var urlCharger = params.get("chargers");
+  var urlService = params.get("service");
+  var urlTotal = params.get("total");
+  var id = params.get("id");
+  console.log("OBJECT CREATION");
+  var input_firstName = document.querySelector("#firstName-input");
+  var input_lastName = document.querySelector("#lastName-input");
+  var input_email = document.querySelector("#email-input");
+  var input_number = document.querySelector("#number-input");
+  var input_password = document.querySelector("#password-input");
+  var data = {
+    service: urlService,
+    charger: urlCharger,
+    total: urlTotal,
+    firstName: input_firstName.value,
+    lastName: input_lastName.value,
+    email: input_email.value,
+    phoneNumber: input_number.value,
+    password: input_password.value
+  };
+  console.log(data);
+  post(data);
+}
+
+function post(data) {
+  var postData = JSON.stringify(data);
+  fetch("https://voltcustomers-f457.restdb.io/rest/customer-details", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "h-apikey": "b9a6eb9dec1772512d2c6f9deeafcf2fbd7e2",
+      "cache-control": "no-cache"
+    },
+    body: postData
+  }).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    return console.log(data);
+  });
+}
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50758" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65418" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

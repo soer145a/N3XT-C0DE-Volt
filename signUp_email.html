@@ -65,18 +65,17 @@
       <form id="signUp-block-form">
         <h1>Account Details</h1>
         <label for="firstName-input">First Name</label>
-        <input type="text" name="firstName" id="firstName-input" >
+        <input type="text" name="firstName" id="firstName-input" required />
         <label for="lastName-input">Last Name</label>
-        <input type="text" name="lastName" id="lastName-input" >
+        <input type="text" name="lastName" id="lastName-input" required />
         <label for="email-input">Email Address</label>
-        <input type="email" name="email" id="email-input" required>
+        <input type="email" name="email" id="email-input" required />
         <label for="number-input">Phone Number <span>*</span></label>
-        <input type="number" name="number" id="number-input" required>
+        <input type="number" name="number" id="number-input" required />
         <label for="password-input">Password<span>*</span></label>
-        <input type="password" name="password" id="password-input" >
-        <input type="submit" value="Sign Up" id='signup-submit'>
+        <input type="password" name="password" id="password-input" required />
+        <div id="signup-submit">Sign Up!</div>
       </form>
-
     </main>
   </body>
   <script src="signUp_email.js"></script>

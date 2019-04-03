@@ -64,16 +64,12 @@ function updateSummary() {
 }
 
 function addToURL() {
-  let localId =
-    Math.random()
-      .toString(36)
-      .substring(2, 15) +
-    Math.random()
-      .toString(36)
-      .substring(2, 15);
+  let localId = Math.random()
+    .toString(36)
+    .substring(2, 15);
 
   let urlString =
-    "?&id=" +
+    "?id=" +
     localId +
     "&chargers=" +
     chargerTotal +
@@ -81,6 +77,6 @@ function addToURL() {
     swapServiceTotal +
     "&total=" +
     sum;
-  console.log(urlString);
+
   window.location.assign("signUp.html" + urlString);
 }

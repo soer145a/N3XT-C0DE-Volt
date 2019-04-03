@@ -1,99 +1,96 @@
-$theGray: #C4C4C4;
+$theGray: #c4c4c4;
 
 #signUp-block {
-    grid-column:1/3;
-    background-color:white;
-    display:grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column: 1/3;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    font-family:$textFont;
-    height: 70vh;
-    width:100%;
-    background-color: white;
-    margin: auto;
-    margin-top: 5vw;
+  font-family: $textFont;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5vw;
 
-    h1 {
-        @extend reset;
-        justify-self:center;
-        align-self:center;
-    }
+  h1 {
+    @extend reset;
+    justify-self: center;
+    align-self: center;
+  }
 
-    #or {
-        @extend reset;
-        justify-self:center;
-        align-self:center;
-        color:$theGray;
-        font-size:2em;
-    }
+  #or {
+    @extend reset;
+    justify-self: center;
+    align-self: center;
+    color: $theGray;
+    font-size: 2em;
+  }
 
-    .signup-btn {
-        width:50%;
-        justify-self:center;
-        height:66.6666%;
-        align-self:center;
-        font-size:2em;
-    }
+  .signup-btn {
+    width: 50%;
+    justify-self: center;
+    height: 66.6666%;
+    align-self: center;
+    font-size: 2em;
+  }
 
+  #signup-fb-btn {
+    background: #3b5998;
+    color: white;
+    border-radius: 6px;
+  }
 
-    #signup-fb-btn {
-        background: #3B5998;
-        color:white;
-        border-radius: 6px;
-    }
+  #signup-google-btn {
+    background: #dd4b39;
+    color: white;
+    border-radius: 6px;
+  }
+  #signup-email-btn {
+    background: #ffffff;
+    border: 1px solid #9bb140;
+    box-sizing: border-box;
 
-    #signup-google-btn {
-        background: #DD4B39;
-        color:white;
-        border-radius: 6px;
-    }
-    #signup-email-btn {
-        background: #FFFFFF;
-        border: 1px solid #9BB140;
-        box-sizing: border-box;
-       
-        border-radius: 6px;
-        color:$theGreen;
-    }
-
+    border-radius: 6px;
+    color: $theGreen;
+  }
 }
 
 #signUp-block-form {
-    grid-column:1/3;
-    background-color:white;
-    display:grid;
+  grid-column: 1/3;
+  background-color: white;
+  display: grid;
 
-    font-family:$textFont;
-    height: 70vh;
-    width:100%;
-    background-color: white;
+  font-family: $textFont;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 5vw;
+
+  h1 {
+    @extend reset;
+    justify-self: center;
+    align-self: center;
+  }
+
+  input {
+    border: none;
+    border-bottom: 2px solid $theGray;
+    width: 40%;
     margin: auto;
-    margin-top: 5vw;
-
-    h1 {
-        @extend reset;
-        justify-self:center;
-        align-self:center;
-    }
-
-    input {
-        border: none;
-        border-bottom: 2px solid $theGray;
-        width:40%;
-        margin:auto;
-    }
-    label {
-        color:$theGray;
-        width:40%;
-        margin:auto;
-    }
-
-    #signup-submit {
-        background: #9BBE40;
-        border: 2px solid #9BBE40;
-        box-sizing: border-box;
-        border-radius: 6px;
-        width:8%;
-        height:60%;
-    }
+  }
+  label {
+    color: $theGray;
+    width: 40%;
+    margin: auto;
+  }
+}
+#signup-submit {
+  background: #9bbe40;
+  border: 2px solid #9bbe40;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 8%;
+  height: 60%;
 }

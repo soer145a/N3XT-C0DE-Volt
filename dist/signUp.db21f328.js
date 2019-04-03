@@ -124,13 +124,20 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   console.log("INIT");
-  var params = new URL(document.location).searchParams;
-  var charger = params.get("chargers"); // is the string "Jonathan Smith".
-
-  var service = params.get("service"); // is the number 18
-
+  var params = new URL(window.location).searchParams;
+  var charger = params.get("chargers");
+  var service = params.get("service");
   var total = params.get("total");
-  console.log(charger, service, total);
+  var id = params.get("id");
+  console.log(charger + " " + service + " " + total + " " + id);
+  var urlString = "?id=" + id + "&chargers=" + charger + "&service=" + service + "&total=" + total;
+  document.querySelector("#signup-email-btn").addEventListener("click", function () {
+    nextPage(urlString);
+  });
+}
+
+function nextPage(param) {
+  window.location.assign("signUp_email.html" + param);
 }
 },{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -160,7 +167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65437" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
